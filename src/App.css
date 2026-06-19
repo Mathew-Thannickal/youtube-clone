@@ -1110,3 +1110,31 @@
     font-size: 15px;
   }
 }
+
+/* Fix unwanted horizontal scrollbar */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.app {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.main-layout {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.content {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.video-grid {
+  max-width: 100%;
+}
