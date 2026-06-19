@@ -1,0 +1,128 @@
+/* ============================================================
+   Design Tokens – Light Mode (Premium)
+   ============================================================ */
+:root {
+  --font: 'Inter', system-ui, sans-serif;
+
+  /* Backgrounds */
+  --bg-app:        #f4f6f8;
+  --bg-nav:        rgba(255, 255, 255, 0.75);
+  --bg-sidebar:    rgba(255, 255, 255, 0.75);
+  --bg-card:       #ffffff;
+  --bg-hover:      rgba(0, 0, 0, 0.05);
+  --bg-chip:       #eef0f2;
+  --bg-chip-hover: #e2e5e9;
+  --bg-input:      #ffffff;
+  --bg-overlay:    rgba(0,0,0,0.1);
+
+  /* Text */
+  --text-primary:   #0f1419;
+  --text-secondary: #536471;
+  --text-tertiary:  #8b98a5;
+  --text-link:      #1d9bf0;
+
+  /* Brand & Accents */
+  --brand:            #ff0000;
+  --brand-gradient:   linear-gradient(135deg, #ff0000, #ff4d4d);
+  --active-gradient:  linear-gradient(135deg, #111, #333);
+  --glow-shadow:      0 12px 40px rgba(0, 0, 0, 0.12);
+  --ambient-glow:     linear-gradient(45deg, rgba(255,0,0,0.4), rgba(79,172,254,0.4), rgba(161,140,209,0.4));
+
+  /* Borders & Shadows */
+  --border:        #e1e8ed;
+  --shadow-sm:     0 2px 8px rgba(0,0,0,0.04);
+  --shadow-card:   0 8px 24px rgba(0,0,0,0.06);
+  --shadow-nav:    0 1px 0 rgba(0,0,0,0.05);
+  --radius-card:   16px;
+  --radius-thumb:  14px;
+  --radius-btn:    24px;
+  --radius-chip:   12px;
+
+  /* Sizing */
+  --nav-height: 64px;
+  --sidebar-w:  250px;
+}
+
+/* ============================================================
+   Design Tokens – Dark Mode (Midnight/Premium)
+   ============================================================ */
+.dark {
+  --bg-app:        #09090b;
+  --bg-nav:        rgba(9, 9, 11, 0.75);
+  --bg-sidebar:    rgba(9, 9, 11, 0.75);
+  --bg-card:       #18181b;
+  --bg-hover:      rgba(255, 255, 255, 0.08);
+  --bg-chip:       #27272a;
+  --bg-chip-hover: #3f3f46;
+  --bg-input:      #18181b;
+  --bg-overlay:    rgba(255,255,255,0.06);
+
+  --text-primary:   #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-tertiary:  #71717a;
+  --text-link:      #3ea6ff;
+
+  --active-gradient: linear-gradient(135deg, #fafafa, #e4e4e7);
+  --glow-shadow:     0 12px 40px rgba(0, 0, 0, 0.4);
+  --ambient-glow:    linear-gradient(45deg, rgba(255,0,0,0.2), rgba(79,172,254,0.2), rgba(161,140,209,0.2));
+
+  --border:        #27272a;
+  --shadow-sm:     0 2px 8px rgba(0,0,0,0.2);
+  --shadow-card:   0 8px 24px rgba(0,0,0,0.3);
+  --shadow-nav:    0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* ============================================================
+   Global Reset & Custom Scrollbar
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg-app);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font);
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-tertiary);
+  border-radius: 10px;
+  opacity: 0.5;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
