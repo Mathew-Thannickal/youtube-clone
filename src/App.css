@@ -1138,3 +1138,102 @@ body,
 .video-grid {
   max-width: 100%;
 }
+
+/* ===== FINAL LAYOUT FIX FOR GITHUB PAGES ===== */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Force sidebar and content to stay side-by-side */
+.main-layout {
+  display: flex !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  min-height: calc(100vh - 70px);
+  overflow-x: hidden !important;
+}
+
+/* Sidebar should stay on the left */
+.sidebar {
+  flex: 0 0 230px !important;
+  width: 230px !important;
+  max-width: 230px !important;
+  min-height: calc(100vh - 70px);
+  overflow-x: hidden !important;
+}
+
+/* Main content should start at the top, not below sidebar */
+.content,
+.main-content,
+.home-content,
+.feed,
+.video-section {
+  flex: 1 !important;
+  width: calc(100% - 230px) !important;
+  max-width: calc(100vw - 230px) !important;
+  padding: 24px !important;
+  margin-top: 0 !important;
+  overflow-x: hidden !important;
+}
+
+/* Fix category/filter row */
+.category-tabs,
+.categories,
+.filter-tabs,
+.chip-row {
+  max-width: 100% !important;
+  overflow-x: auto;
+}
+
+/* Make video grid look proper */
+.video-grid {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
+  gap: 24px !important;
+}
+
+/* Prevent cards/images from overflowing */
+.video-card,
+.video-card img {
+  max-width: 100% !important;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column !important;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    display: flex !important;
+    overflow-x: auto !important;
+  }
+
+  .content,
+  .main-content,
+  .home-content,
+  .feed,
+  .video-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 16px !important;
+  }
+}
